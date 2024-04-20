@@ -125,7 +125,7 @@ type refuseParser struct {
 
 // Parse parses the auckland council rubbish webpage.
 func (p *refuseParser) parse(r io.Reader) ([]RubbishCollection, error) {
-	const datesSection = "#ctl00_SPWebPartManager1_g_dfe289d2_6a8a_414d_a384_fc25a0db9a6d_ctl00_pnlHouseholdBlock"
+	datesSection := "#ctl00_SPWebPartManager1_g_dfe289d2_6a8a_414d_a384_fc25a0db9a6d_ctl00_pnlHouseholdBlock2"
 	p.detail = make([]RubbishCollection, 2)
 	doc, err := goquery.NewDocumentFromReader(r)
 	if err != nil {

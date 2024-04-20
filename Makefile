@@ -8,5 +8,5 @@ server: $(SRC)
 	go build -o $@
 
 docker:
-	docker build -t $(IMAGE) .
+	docker build --platform linux/amd64 -t $(IMAGE) .
 .PHONY:docker
